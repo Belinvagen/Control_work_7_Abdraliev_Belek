@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 def index(request):
     entries = GuestbookEntry.objects.filter(status='active').order_by('-created_at')
-    return render(request, 'index.html', {'entries': entriesk})
+    return render(request, 'index.html', {'entries': entries})
 
 
 def add_entry(request):

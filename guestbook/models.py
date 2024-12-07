@@ -18,7 +18,7 @@ class GuestbookEntry(models.Model):
 
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Время редактирования")
 
-k
+
     status = models.CharField(
         max_length=10,
         choices=STATUS_CHOICES,
