@@ -55,7 +55,7 @@ ROOT_URLCONF = 'guestbook_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['guestbook/templates'],
+        'DIRS': ['kguestbook/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

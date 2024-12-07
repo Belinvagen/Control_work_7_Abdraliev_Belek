@@ -1,4 +1,4 @@
-from django.apps import AppConfig
+kfrom django.apps import AppConfig
 
 
 class GuestbookConfig(AppConfig):

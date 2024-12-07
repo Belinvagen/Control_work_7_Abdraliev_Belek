@@ -5,3 +5,4 @@ class GuestbookEntryForm(forms.ModelForm):
     class Meta:
         model = GuestbookEntry
         fields = ['name', 'email', 'text']
+k
