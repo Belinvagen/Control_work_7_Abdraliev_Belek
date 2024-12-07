@@ -1,4 +1,4 @@
-k"""
+"""
 ASGI config for guestbook_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
