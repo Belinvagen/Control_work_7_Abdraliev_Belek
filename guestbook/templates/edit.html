@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>{% if form.instance.pk %}Редактировать запись{% else %}Добавить запись{% endif %}</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">{% if form.instance.pk %}Сохранить изменения{% else %}Добавить запись{% endif %}</button>
+  </form>
+{% endblock %}

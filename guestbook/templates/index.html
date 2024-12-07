@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Гостевая книга</h1>
+
+  <a href="{% url 'add_entry' %}" class="btn btn-primary">Добавить запись</a>
+  <hr>
+
+  {% for entry in entries %}
+    <div class="guestbook-entry">
+      <p><strong>{{ entry.name }}</strong> ({{ entry.email }})</p>
+      <p>{{ entry.text }}</p>
+      <p><small>Создано: {{ entry.created_at }} | Обновлено: {{ entry.updated_at }}</small></p>
+
+      <a href="{% url 'edit_entry' entry.pk %}" class="btn btn-warning">
+        <i class="fa fa-edit"></i> Редактировать
+      </a>
+      <a href="{% url 'delete_entry' entry.pk %}" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить эту запись?');">
+        <i class="fa fa-trash"></i> Удалить
+      </a>
+      <hr>
+    </div>
+  {% empty %}
+    <p>Нет активных записей в гостевой книге.</p>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+[
+    {
+        "model": "guestbook.guestbookentry",
+        "pk": 1,
+        "fields": {
+            "name": "John Doe",
+            "email": "john_doe@example.com",
+            "text": "Привет из гостевой книги!",
+            "created_at": "2024-12-07T10:00:00Z",
+            "updated_at": "2024-12-07T11:00:00Z",
+            "status": "active"
+        }
+    },
+    {
+        "model": "guestbook.guestbookentry",
+        "pk": 2,
+        "fields": {
+            "name": "Jane Doe",
+            "email": "jane_doe@example.com",
+            "text": "Эта запись заблокирована.",
+            "created_at": "2024-12-07T11:00:00Z",
+            "updated_at": "2024-12-07T12:00:00Z",
+            "status": "blocked"
+        }
+    }
+]

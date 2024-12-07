@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Вы уверены, что хотите удалить запись?</h2>
+  <p><strong>Имя:</strong> {{ entry.name }}</p>
+  <p><strong>Email:</strong> {{ entry.email }}</p>
+  <form method="POST">
+    {% csrf_token %}
+    <label for="email">Введите email для подтверждения:</label>
+    <input type="email" name="email" required>
+    <button type="submit" class="btn btn-danger">Удалить запись</button>
+  </form>
+  <a href="{% url 'index' %}" class="btn btn-secondary">Отмена</a>
+{% endblock %}
